@@ -1,0 +1,637 @@
+/*
+  Name: Bella Rivera
+  Date: 31/8/2021
+  Description: This is the style.css page for my personal website.
+  It is used to give my portfolio its distinct look and feel.
+*/
+
+body {
+  height: 100%;
+  width: 100%;
+  color: white;
+  margin: 0;
+}
+
+/*
+Used this to learn how to center with flexbox:
+https://www.better.dev/centering-things-with-css-flexbox */
+
+#main-page {
+  min-height: 100vh;
+  justify-content: center;
+}
+
+#about-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 70vh;
+  justify-content: space-around;
+
+}
+
+/* #about-page > .about-text-flex {
+  flex: auto;
+} */
+
+#about-page > .bella {
+  flex: auto;
+}
+
+#main-page {
+  display: flex;
+  height: auto;
+  /* Felix Mittermeier - Pexels - CC0 */
+  background-image: url('new website images/croppedseattle.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  align-items: center;
+}
+
+#about-page, #projects-page, #contact-page {
+  padding: 120px;
+}
+
+h1, h2, h3, p, li, a {
+  font-family: 'Rajdhani', 'Times New Roman', "Times", serif;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 100px;
+  color: white;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 36px;
+  text-align: center;
+}
+
+p, summary {
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+  /* z-index: -1; */
+}
+
+a {
+  color: white;
+}
+
+header {
+  background-color: rgb(100, 100, 100);
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  z-index: 1;
+
+}
+
+header ul {
+  margin: 0;
+  padding: 0 20px;
+}
+
+/* learned how to make a horizontal list and how change color on hover from here:
+https://www.w3schools.com/html/tryit.asp?filename=tryhtml_lists_menu */
+
+header li {
+  padding: 6px 15px;
+  list-style: none;
+  float: right;
+  text-align: center;
+  width: 100px;
+}
+
+header .logo li {
+  padding: 2px;
+  width: auto;
+}
+
+header .logo .name {
+  padding: 2px;
+}
+
+header .logo a {
+  width: 180px;
+}
+
+header .main-menu a, .head-title {
+  display: block;
+  font-size: 24px;
+  text-decoration: none;
+  color: white;
+  padding: 7.5px;
+  margin-left: -50px;
+  /* border: 2px solid white; */
+}
+
+header .main-menu a:hover, .head-title:hover {
+  color: rgb(60, 60, 60);
+}
+
+header .logo img {
+  height: 43px;
+  /* border: 2px solid white; */
+}
+
+header .logo {
+  float: left;
+  padding: 5px 80px;
+}
+
+/* @media only screen and (max-width: 750px) {
+  #contact-nav, #projects-nav, #about-nav {
+    text-indent: 9000px;
+  }
+  #menupic {
+    visibility: visible;
+  }
+} */
+
+
+#menupic {
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  margin-right: 20px;
+  visibility: hidden;
+}
+
+/* #contact-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 70vh;
+  justify-content: space-around;
+
+} */
+
+.row {
+  display: flex;
+  margin-left: auto;
+  margin-top: -50px;
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  position: static;
+}
+
+.column {
+  float: left;
+  align-self: center;
+  padding: 25px;
+}
+
+#insta-link {
+  height: 43px;
+  width: 43px;
+  margin-left: 40%;
+}
+
+#insta-link:hover {
+  content: url("new website images/insta copy.png");
+}
+
+#linkedin-link {
+  height: 38px;
+  width: 43px;
+  margin-left: 18%;
+}
+
+#linkedin-link:hover {
+  content: url("new website images/linkedin copy.png");
+}
+
+#email-link {
+  height: 32px;
+  width: 37px;
+  margin-left: 4%;
+  margin-top: 4px;
+}
+
+#email-link:hover {
+  content: url("new website images/email copy.png");
+}
+
+footer {
+  display: inline;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(50, 50, 50);
+}
+
+/* footer img {
+  width: 22px;
+} */
+
+footer p {
+  margin-bottom: -100px;
+  font-size: 16px;
+}
+
+#main-page img {
+  width: 60px;
+  position: absolute;
+  top: 90%;
+  transform: translate(-50%, -50%);
+}
+
+#about-page {
+  background-color: rgb(80, 80, 80);
+}
+
+@keyframes wipe-enter {
+	0% {
+		transform: scaleX(0);
+	}
+	50% {
+		transform: scaleX(1);
+	}
+}
+
+.wipe-enter-element {
+    animation: wipe-enter 2s;
+  }
+
+  /* .reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s ease-in;
+} */
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* #about-page .about-column2 {
+  padding: 0 85px;
+  text-align: center;
+  display: inline;
+} */
+
+.heading {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  text-align: center;
+  align-self: center;
+  position: static;
+  margin-bottom: 30px;
+}
+#about-page img {
+  max-width: 380px;
+  min-width: 280px;
+}
+
+#about-text {
+  /* background-color: rgb(50, 50, 50, 0.8);
+  border-radius: 10px; */
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  min-width: 300px;
+  width: 100%;
+}
+
+.about-row {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  /* justify-content: space-between; */
+}
+
+.about-column1 {
+  float: left;
+  width: 50%;
+  margin-bottom: 50px;
+  align-self: center;
+}
+
+.about-column2 {
+  float: left;
+  width: 50%;
+  align-self: center;
+}
+
+
+/* #about-text {
+  float: left;
+  margin-top: 20px;
+  margin-left: -25px;
+  width: 800px;
+  background-color: rgb(50, 50, 50, 0.8);
+  border-radius: 10px;
+  padding-left: 50px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex: auto;
+  min-width: 50px;
+} */
+
+@media screen and (max-width: 1000px) {
+  .about-row {
+    flex-direction: column;
+  }
+}
+
+#bellapic {
+  -webkit-filter: drop-shadow(7px 7px 7px #222);
+  border-radius: 50px;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
+/* #about-page li, #contact-page section li {
+  font-size: 24px;
+  list-style: none;
+  text-align: center;
+} */
+
+#projects-page {
+  background-color: rgb(50, 50, 50);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 70vh;
+  justify-content: space-around;
+}
+
+#projects-text {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  min-width: 300px;
+  max-width: 600px;
+  width: 100%;
+}
+
+#projects-page {
+  /* min-width: ; */
+  justify-content: center;
+}
+
+#projects-title {
+  width: 240px;
+  margin-top: 0px;
+}
+
+.projects-row {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+
+}
+
+.projects-column {
+  float: left;
+  padding: 25px;
+  align-self: center;
+  justify-content: center;
+}
+
+#hangman-link {
+  height: 270px;
+  width: 270px;
+  border-radius: 20px;
+  align-self: center;
+  -webkit-filter: drop-shadow(7px 7px 7px #222);
+}
+
+#hangman-text {
+  font-size: 13px;
+  width: 280px;
+  margin-top: 10px;
+  align-self: center;
+}
+
+#website-link {
+  height: 270px;
+  width: 270px;
+  border-radius: 20px;
+  align-self: center;
+  -webkit-filter: drop-shadow(7px 7px 7px #222);
+}
+
+#website-text {
+  font-size: 13px;
+  width: 260px;
+  margin-top: 10px;
+  align-self: center;
+}
+
+#website-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  margin-top: 200px;
+  align-self: center;
+}
+
+#map-link {
+  height: 270px;
+  width: 270px;
+  border-radius: 20px;
+  align-self: center;
+  -webkit-filter: drop-shadow(7px 7px 7px #222);
+}
+
+#map-text {
+  font-size: 13px;
+  width: 260px;
+  margin-top: 10px;
+  align-self: center;
+}
+
+#map-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  margin-top: 200px;
+  align-self: center;
+}
+
+#hangman-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+  margin-top: 150px;
+  align-self: center;
+}
+
+#contact-title {
+  min-width: 330px;
+  text-align: center;
+  margin-bottom: 30px;
+  align-self: center;
+}
+
+#contact-page {
+  background-color: rgb(50, 50, 50);
+}
+
+.title {
+  text-align: center;
+  width: 500px;
+  height: 130px;
+  position: static;
+  margin-top: -400px;
+  margin-left: 50px;
+  border-bottom: 2px solid white;
+  /* border:2px solid white; */
+}
+
+/* used this to learn about absolute positioning with flexbox:
+https://css-tricks.com/arranging-elements-top-bottom-instead-left-right-float/ */
+
+/* .heading {
+  height: 60px;
+  width: 320px;
+  padding: 30px 30%;
+} */
+
+.heading h2 {
+  text-align: center;
+  margin-top: -70px;
+  border-bottom: 2px solid white;
+  align-self: center;
+  position: static;
+  width: 250px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  text-align: center;
+}
+
+.sub-heading {
+  width: auto;
+  height: 60px;
+  padding: 20px 20% 0 20%;
+}
+
+.sub-heading h3 {
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  border-top: 4px solid black;
+  /* background-color: white; */
+  z-index: -1;
+  width: auto;
+}
+
+.copyright {
+  background-color: rgb(50, 50, 50);
+  padding: 0px;
+  margin-top: -25px;
+  min-height: 35px;
+  margin-bottom: -40px;
+}
+
+/* arrows and animation from codepen: https://codepen.io/postor/pen/mskxI */
+.arrows {
+	width: 70px;
+	height: 100px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+}
+
+#homepage-arrows {
+  margin-bottom: 40px;
+  bottom: 20px;
+}
+
+#project-arrows1 {
+}
+
+#project-arrows2 {
+  margin-top: 40px;
+}
+
+#project-arrows3 {
+  margin-top: 40px;
+}
+
+.arrows path {
+	stroke: white;
+	fill: transparent;
+	stroke-width: 3px;
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite;
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+.projects {
+  padding: 20px;
+  text-align: center;
+}
+
+.projects a img {
+  width: 400px;
+  padding: 0;
+  border: 4px solid black;
+}
+
+.left div, .right div {
+  z-index: initial;
+  font-size: 24px;
+}
+
+.left {
+  padding: 20px 83px;
+  float: left;
+}
+
+.right {
+  padding: 20px 84px;
+  float: right;
+}
+
+.italicized {
+  font-style: italic;
+}

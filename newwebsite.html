@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<!--
+  Name: Bella Rivera
+  Description: This is the index.html page for my personal website.
+  It includes the landing page, as well as an About Me section.
+-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bella Rivera</title>
+  <link rel="stylesheet" href="newstyle.css">
+  <link href='https://fonts.googleapis.com/css?family=Oooh Baby' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Rajdhani' rel='stylesheet'>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="logo">
+        <li class="name">
+          <a href="newwebsite.html" class="head-title">bella rivera</a>
+        </li>
+      </ul>
+      <ul class="main-menu">
+        <li><a href="#contact-page" id="contact-nav">contact</a></li>
+        <li><a href="newprojects.html" id="projects-nav">projects</a></li>
+        <li><a href="#about-page" id="about-nav">about</a></li>
+        <li><img src="new website images/menupic.png" id="menupic" alt="hamburger menu"></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main-page" class="page">
+    <div class="title">
+      <h1>bella rivera</h1>
+      <!-- arrows and animation from codepen: https://codepen.io/postor/pen/mskxI -->
+      <svg class="arrows" id="homepage-arrows">
+              <a xlink:href="#about-page">
+							<path class="a1" d="M0 0 L30 32 L60 0"></path>
+							<path class="a2" d="M0 20 L30 52 L60 20"></path>
+							<path class="a3" d="M0 40 L30 72 L60 40"></path>
+						</svg>
+    </div>
+  </main>
+  <div id="about-page" class="page">
+    <section>
+      <div class="heading">
+          <h2 id="about-title">about me</h2>
+        <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+              var windowHeight = window.innerHeight;
+              var elementTop = reveals[i].getBoundingClientRect().top;
+              var elementVisible = 150;
+
+              if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+              } else {
+                reveals[i].classList.remove("active");
+              }
+            }
+          }
+
+          window.addEventListener("scroll", reveal);
+        </script>
+      </div>
+
+      <div class="about-row">
+        <div class="about-column1" id="about-text">
+          <p>Hi there! My name is Bella Rivera, and I am a third-year computer
+            science student at the University of Washington. Some of my favorite
+            areas to work in are website development, product design and prototyping
+            (as they relate to HCI), and of course full-stack software development.
+            In addition, for the past couple of years, I have been involved in the
+            teaching side of computer science, serving as both a teaching
+            assistant and student lead for an introductory computer science program
+            at the University of Washington.
+
+            <br></br>
+
+            On a more general note, I was born and raised in Seattle, Washington
+            after both of my parents immigrated from the Philippines. Despite not
+            being a huge fan of the weather, I love the city, which is why I chose
+            that beautiful photo of downtown Seattle as my homepage background.
+            Although I did not take the photo myself, I did some light editing on it,
+            which is one of my favorite hobbies.  I have such a passion for creative
+            projects, whether that be photo/video editing, music production, sketching,
+            writing poetry — the list goes on.
+
+            <br></br>
+
+            Other random interests: soccer, bubble tea, purple, karaoke, The Office, guitar, photography
+          </p>
+        </div>
+        <div class="about-column2">
+          <img src="new website images/bellapic.jpg" id="bellapic" alt="a photo of Bella Rivera">
+        </div>
+      </div>
+
+      <!-- <div class="about-text-flex" id="about-text">
+        <p>Hi there! My name is Bella Rivera, and I am a third-year computer
+          science student at the University of Washington. Some of my favorite
+          areas to work in are website development, product design and prototyping
+          (as they relate to HCI), and of course full-stack software development.
+          In addition, for the past couple of years, I have been involved in the
+          teaching side of computer science, serving as both a teaching
+          assistant and student lead for an introductory computer science program
+          at the University of Washington.
+
+          <br></br>
+
+          On a more general note, I was born and raised in Seattle, Washington
+          after both of my parents immigrated from the Philippines. Despite not
+          being a huge fan of the weather, I love the city, which is why I chose
+          that beautiful photo of downtown Seattle as my homepage background.
+          Although I did not take the photo myself, I did some light editing on it,
+          which is one of my favorite hobbies.  I have such a passion for creative
+          projects, whether that be photo/video editing, music production, sketching,
+          writing poetry — the list goes on.
+
+          <br></br>
+
+          Other random interests: soccer, bubble tea, purple, karaoke, The Office, guitar, photography
+        </p>
+      </div> -->
+
+      <!-- <div class="bella">
+        <img src="bellapic.jpg" id="bellapic" alt="a photo of Bella Rivera">
+      </div> -->
+    </section>
+  </div>
+
+  <div id="contact-page" class="page">
+    <section>
+      <div class="heading">
+        <h2 id="contact-title">find me here</h2>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <a href="https://www.instagram.com/bellaxrivera/" target="_blank"><img src="new website images/insta.png" alt="instagram" id="insta-link"></a>
+        </div>
+        <div class="column">
+          <a href="https://www.linkedin.com/in/bellarivera/" target="_blank"><img src="new website images/linkedin.png" alt="linkedin" id="linkedin-link"></a>
+        </div>
+        <div class="column">
+          <a href="mailto:isabella_rivera20@hotmail.com" target="_blank"><img src="new website images/email.png" alt="email" id="email-link"></a>
+        </div>
+      </div>
+    </div>
+  <!-- HELLO -->
+
+  <footer>
+    <div class="copyright">
+      <p>
+        Portions of this page © 2021 Bella Rivera, all other attributions cited in page source
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
